@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+
+$person = new \App\Person(30);
+
+$person->setName('Jonh', 'Snow');
+$person_name = $person->getName();
+$serializer_json = new \App\JsonSerializer();
+$serializer_yaml = new \App\YamlSerializer();
+
+//var_dump($serializer_json->jsonSerializer($person));
+
+var_dump($serializer_yaml->yamlSerilizer($person));
+
+//return $serializer->jsonSerializer($person);
