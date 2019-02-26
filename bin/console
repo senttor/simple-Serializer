@@ -8,10 +8,10 @@ $person = new \App\Person(30);
 
 $person->setName('Jonh', 'Snow');
 $person_name = $person->getName();
-$serializer = new  JsonYamlSerialize();
+$serializer = new  \App\JsonYamlSerialize();
 
 
-var_dump($serializer->jsonSerializer($person));
+var_dump($serializer->yamlSerilizer($person));
 
 var_dump($serializer->jsonSerializer($person));
 

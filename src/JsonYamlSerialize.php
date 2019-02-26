@@ -1,8 +1,12 @@
 <?php
+
+namespace App;
+
+
 class JsonYamlSerialize
 {
 
-   public  static  function objToArray(\App\PersonInterface $obj)
+   protected  function objToArray(\App\PersonInterface $obj)
     {
         foreach ($obj as $key => $value) {
 
@@ -11,9 +15,9 @@ class JsonYamlSerialize
         return $res_arr;
     }
 
-    function  yamlSerilizer(\App\PersonInterface $obj)
+   public function  yamlSerilizer(\App\PersonInterface $obj)
     {
-        $array_obj = JsonYamlSerialize::objToArray($obj);
+        $array_obj = $this->objToArray($obj);
 
         return yaml_emit($array_obj);
     }
