@@ -9,7 +9,7 @@
 namespace App;
 
 
-interface PersonInt
+interface PersonInterface
 {
 public function getName();
 

@@ -9,7 +9,7 @@
 namespace App;
 
 
-class Person implements PersonInt
+class Person extends Persons
 {
 private $name;
 private $lastname;
